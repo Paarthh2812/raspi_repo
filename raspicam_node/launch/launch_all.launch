@@ -1,0 +1,8 @@
+<launch>
+
+<include file = "$(find raspicam_node)/launch/camerav2_410x308_30fps.launch">
+</include>
+
+<node pkg="raspicam_node" type="navigation_subscriber.py" name="navigator"  output="screen"/>s
+
+</launch>
