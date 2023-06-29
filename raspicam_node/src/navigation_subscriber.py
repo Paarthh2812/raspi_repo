@@ -43,17 +43,37 @@ def take_action(X,Z):
     	print("x>0")
     	left = X - (Z/2)
     	right = X + (Z/2)
+    	if left > 100:
+    		left = 100
+    	if right > 100 :
+    		right = 100
+    	if left < 0:
+    		left = 0 
+    	if right < 0 :
+    		right = 0 
     	forward(left,right)
     elif X < 0:
     	print("x<0")
-    	left = -X -Z
-    	right = -X  
+    	left = -X - (Z/2)
+    	right = -X  +(Z/2)
+    	if left > 100:
+    		left = 100
+    	if right > 100 :
+    		right = 100
+    	if left < 0:
+    		left = 0 
+    	if right < 0 :
+    		right = 0  
     	backward(left,right)
     elif X == 0 and Z != 0:
     	X = 45
     	left = X - Z
     	right = X + Z 
-    	forward(left,right)
+    	if left > 100 or right > 100:
+    		print("wrong values")
+    		stop()
+    	else: 
+    		forward(left,right)
     elif X == 0:
     	stop()
     	print("x==0")

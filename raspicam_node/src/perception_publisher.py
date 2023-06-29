@@ -5,7 +5,7 @@ import cv2
 from cv_bridge import CvBridge,CvBridgeError
 import numpy as np
 
-cap = cv2.VideoCapture('/dev/video1', cv2.CAP_V4L)
+cap = cv2.VideoCapture('/dev/video0', cv2.CAP_V4L)
 print(cap.isOpened())
 
 if not cap.isOpened():
